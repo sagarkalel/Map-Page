@@ -57,6 +57,18 @@ class MapPageView extends StatelessWidget {
           );
         },
       ),
+      floatingActionButton: ElevatedButton.icon(
+        onPressed: () {
+          /// going back to home
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => const HomePage()),
+            (route) => false,
+          );
+        },
+        icon: const Icon(Icons.home),
+        label: const Text("Back to Home"),
+      ),
     );
   }
 }
